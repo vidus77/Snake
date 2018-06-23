@@ -2,6 +2,16 @@
 
 ## A Snake játék programozása
 
+### 0. Feladat Előkészületek
+- [ ] Bejelentkezni a GitHub-ra
+- [ ] Létrehozni egy új Repót
+- [ ] Klónozni a gápre rögtön kinyitva VS2017-ben
+  - [ ] Pontosítani a local Repó helyét a gépen 
+  - [ ] Létrehozni egy áj Solutiont a  Snake201806 néven
+  - [ ] Bezárni a VS-t
+- [ ] Újra megnyitni magát a Solutiont
+- [ ] Belinkelni a ReadMe fájlt a Solution-be (Add Existing ... Add As a link)
+
 ### A játék szabályai
 
 - egy kígyót irányítunk úgy, hogy a fejének az irányát szabjuk, a kígyó követi a fejét.
