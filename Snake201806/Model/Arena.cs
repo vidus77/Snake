@@ -25,13 +25,13 @@ namespace Snake201806.Model
 			switch (e.Key)
 			{
 				case Key.Left:
-				//	break;
+				//	break; //egyelőre nem külön nézzük a leütéseket
 				case Key.Up:
 				//	break;
 				case Key.Right:
 				//	break;
 				case Key.Down:
-					Console.WriteLine(e.Key); // cw két Tab
+					Console.WriteLine(e.Key); // cw +Tab + Tab ~Console.WriteLine~ kiírjuk debugban mit ütöttünk le. 
 					break;
 			}
 		}

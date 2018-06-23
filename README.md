@@ -160,6 +160,39 @@ Játékmenet programozása
 - [ ] ha ütközik magával vége a játéknak
 
 
+### Konkrét programozási eszközök
+1. Létrehoztunk egy osztályt. 
+  - kézzel hozzáadtunk a projekthez egy **Model** mappát (Solution | Add | NewFolder)
+  - kézzel hozzáadtunk egy Class.cs fájlt Arena.cs néven (Model | Add | )
+  
+2. Meg kell tanítani a MainWindow, ami egy különleges függvény, neki nincsenek visszatérési értékei, mert ő a _KONSTRUKTOR_, hogy az **Arena** osztállyal együttműködjön. 
+- Ezért létre kell hozni benne egy példányt belőle (példányosítjuk a MainWinow kapcsokon belül) ```arena = new Arena(); ```
+  - Láthatóság: _Ctrl + pont_ az **Arena** szón felajánlja betöltésre a ```using Snake201806.Model;``` névteret (enélkül nem látná ezt  amappát)
+  - Osztályszintű változó létrehozása  _Ctrl + pont_ az **arena** szón létrehoz egy mezőt (field) ```private Arena arena; ```
+
+3. Létre kell hozni a billentyűleütés elkapóját és egy függvénnyel továbbítani az eseményt a az **Arena** osztálynak 
+- bepötyögjük a ```arena.KeyDown(e); ``` 
+- _Ctrl + pont_ az **KeyDown** szón létrehozza az arena.cs osztályban az ~eventhandlert a billentyűleütéseket elkapó eseménykezlést
+4. Az ** Arena.cs** osztály kódjában szortírozzuk a billentyű leütéseket. Módosítani kell, hoy melyik billentyúzettel mit tegyen.
+``` 
+		internal void KeyDown(KeyEventArgs e)
+		{
+			//	milyen eseményeket kezelünk, nem mindet
+			//	csak a nyíl leütéseket,ezért kell nekönk a switch 
+			switch (e.Key)
+			{
+				case Key.Left:
+				//	break; //egyelőre nem külön nézzük a leütéseket
+				case Key.Up:
+				//	break;
+				case Key.Right:
+				//	break;
+				case Key.Down:
+					Console.WriteLine(e.Key); // cw +Tab + Tab ~Console.WriteLine~ kiírjuk debugban mit ütöttünk le. 
+					break;
+			}
+		}
+```
 
 ### 1. Házi feladat 
 - meg kell tudni jeleníteni az eltelt időt
