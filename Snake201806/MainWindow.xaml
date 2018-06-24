@@ -8,11 +8,16 @@
         KeyDown="Window_KeyDown"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock Margin="60"
+        <TextBlock x:Name="GamePlayTextBlock" Margin="60"
                    HorizontalAlignment="Center"
-                   FontSize="24"
-                   Visibility="Hidden">
-            
+                   FontSize="20"
+                   TextAlignment="Center"
+                   Visibility="Hidden"
+                   >
+            A játék indításához a nyílgombok segítségével 
+            <LineBreak /> <!--egyszerűsített változat a sorok tördeléére számítások nélkül-->
+            el kell indítani a kígyó fejének mozgását
+         
             
         </TextBlock>
         

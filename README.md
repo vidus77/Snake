@@ -137,19 +137,20 @@ Az alkalmazásunk felépítése a következő
 +---------------------------------------+       +-----------------------------------+
 ```
 ### 1. Feladat
-- [ ] elkészíteni a képernyőt (View: MainWindows.xaml)
+- [x] elkészíteni a képernyőt (View: MainWindows.xaml)
   - [ ] tudnia kell megjeleníteni a kígyó fejét
     - [ ] ehhez kell a játéktábla
       - [ ] meg kell tudni jeleníteni a megevett ételek számát
       - [ ] Opcionálisan
         - [ ] meg kell tudni jeleníteni az eltelt időt (Házi feladat)
         - [ ] meg kell tudni jeleníteni a kígyó hosszát (Házi feladat)
-  - [ ] tudnia kell megjeleníteni a játékszabályokat
-  - [ ] tudnia kell elkapni a felhasználó vezérlőparancsait (billentyűleütések), és továbbítni a Model felé.
-- [ ] elkészíteni az alkalmazáslogikát (Model)
-  - [ ] tudnia kell átvenni a billentyűparancsokat
-  - [ ] tudnia kell elindítani a játékmenetet 
-    - [ ] el kell tudnia tüntetni a játékszabályokat
+  - [x] tudnia kell megjeleníteni a játékszabályokat
+  - [x] tudnia kell elkapni a felhasználó vezérlőparancsait (billentyűleütések), és továbbítni a Model felé.
+- [] elkészíteni az alkalmazáslogikát (Model)
+  - [x] tudnia kell átvenni a billentyűparancsokat
+  - [x] tudnia kell elindítani a játékmenetet 
+    - [x] el kell tudnia tüntetni a játékszabályokat
+    - [ ] ...
 - [ ] ezt a két réteget összekötni
 
 
@@ -207,8 +208,10 @@ Játékmenet programozása
 	}
 ```
 - Ezzel létrejött az a **Constructor** definíció az Arena osztályban, ő hozza majd létre* az osztály egy-egy példányát. *_maga a példányosítás a MainWindow-ban történik_
-6. Az egyszerűság kedvéért nevezzük át `MainWindow-t View`-re. Csak a skiccnek való megfelelés céljából. 
-- 
+6. Az egyszerűság kedvéért nevezzük át **F2** billentyűvel változóinkat. Csak a skiccnek való megfelelés céljából. 
+- Átnevezzük a **"mainWinow"** változót **"view"** névre (a kisbetűst)
+- Átnevezzük a **"MainWindow"** _osztályon_belüli_változót_ **"View"** névre (ő a nagybetűs vűltozónk)
+
 7. 
 
 ### 1. Házi feladat 

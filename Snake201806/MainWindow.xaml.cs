@@ -42,7 +42,8 @@ namespace Snake201806
 			//	Viszont így egy olyan fügvényt kezdünk el használni, ami eddig nem volt így definiálva (this) 
 			//	ezért egy Lonstruktorban létre kell hozni, amit Ctrl . lenyomással a VS fel is ajánl létrehozni a 
 			//	az Arena.cs osztályban. Ott meg is fog jelenni ez a kód. 
-			arena = new Arena(this); // ez maga a példányosítás pillanata. innentől kezd az "osztálypéldány" hivatkozható osztályként viselkedni.
+			arena = new Arena(this);    // ez maga a példányosítás pillanata. 
+										//innentől kezd az "osztálypéldány" hivatkozható osztályként viselkedni.
 
 
 		}

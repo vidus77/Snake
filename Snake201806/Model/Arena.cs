@@ -19,15 +19,26 @@ namespace Snake201806.Model
 	class Arena
 	{
 
-		private MainWindow mainWindow;
+		private MainWindow View;
 
 		/// <summary>
 		/// (Autamtikusan generált) Konstruktorfüggvény, ő hozza létre az osztály egy-egy példányát.
 		/// </summary>
-		/// <param name="mainWindow">az ablak, ami létrehozta az Arena példányát vagy más nevén objektumát</param>
-		public Arena(MainWindow mainWindow)
+		/// <param name="view"> (néhai name="mainWindow") az ablak, ami létrehozta az Arena példányát vagy más nevén objektumát</param>
+
+		/// Átnevezzük a "mainWinow" változót "view" névre (a kisbetűst)
+		/// Átnevezzük a "MainWindow" _osztályon_belüli_változót_ "View" névre
+		public Arena(MainWindow view)
 		{
-			this.mainWindow = mainWindow;
+			//hivatkozva az osztálypéldányra - amiben vagyunk {...} - így is el érhetjük
+			// az osztálypéldány classlevel változóját. 
+			this.View = view;   //Automatikus a this.View hivatkozást hozta létre, 
+								//hogy megkölönböztesse az osztályon belüli változót
+								//egyébként erre nem feltétlenül volt szükség
+
+			// A játék kezdetén megjelenítjük a játékszabályokat
+			// mint az a következő sorból is látszik, az osztályon belül a this használata nem kötelező
+			View.GamePlayTextBlock.Visibility = System.Windows.Visibility.Visible;
 		}
 
 		internal void KeyDown(KeyEventArgs e)
@@ -43,7 +54,12 @@ namespace Snake201806.Model
 				case Key.Right:
 				//	break;
 				case Key.Down:
+					// A játék indulásával eltűntetjük a szabályokat
+					View.GamePlayTextBlock.Visibility = System.Windows.Visibility.Hidden;
+
+					//az Output ablak kontrolja
 					Console.WriteLine(e.Key); // cw +Tab + Tab ~Console.WriteLine~ kiírjuk debugban mit ütöttünk le. 
+
 					break;
 			}
 		}
