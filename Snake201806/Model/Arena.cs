@@ -18,6 +18,18 @@ namespace Snake201806.Model
 	/// </summary>
 	class Arena
 	{
+
+		private MainWindow mainWindow;
+
+		/// <summary>
+		/// (Autamtikusan generált) Konstruktorfüggvény, ő hozza létre az osztály egy-egy példányát.
+		/// </summary>
+		/// <param name="mainWindow">az ablak, ami létrehozta az Arena példányát vagy más nevén objektumát</param>
+		public Arena(MainWindow mainWindow)
+		{
+			this.mainWindow = mainWindow;
+		}
+
 		internal void KeyDown(KeyEventArgs e)
 		{
 			//	milyen eseményeket kezelünk, nem mindet

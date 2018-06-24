@@ -8,6 +8,13 @@
         KeyDown="Window_KeyDown"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBlock Margin="60"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   Visibility="Hidden">
+            
+            
+        </TextBlock>
         
     </Grid>
 </Window>

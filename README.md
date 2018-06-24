@@ -194,6 +194,23 @@ Játékmenet programozása
 		}
 ```
 
+5. Meg kell tanítani visszafelé is kommunikálni a MainWindow osztályt.
+- ehhez módosítjuk a ```arena = new Arena(this); ``` függvényt és beszúrtunk egy `this` szót, ami utalás (lesz) arra az osztályra amiben éppen vagyunk (MainWindow-ra) 
+  - de természetesen magától nem tudja az `Arena` osztály, hogy neki van egy ilyen függvénye is, ezt definiálni kell
+  - a definiálásban segít a VS varázsló _Ctrl ._ leyomásával az aláhúzott Arena osztűly nevén fel is ajánlja a definíció létrehozását. 
+``` 
+	private MainWindow mainWindow;
+
+	public Arena(MainWindow mainWindow)
+	{
+		this.mainWindow = mainWindow;
+	}
+```
+- Ezzel létrejött az a **Constructor** definíció az Arena osztályban, ő hozza majd létre* az osztály egy-egy példányát. *_maga a példányosítás a MainWindow-ban történik_
+6. Az egyszerűság kedvéért nevezzük át `MainWindow-t View`-re. Csak a skiccnek való megfelelés céljából. 
+- 
+7. 
+
 ### 1. Házi feladat 
 - meg kell tudni jeleníteni az eltelt időt
 - meg kell tudni jeleníteni a kígyó hosszát
