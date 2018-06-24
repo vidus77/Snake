@@ -39,6 +39,7 @@ namespace Snake201806.Model
 			// A játék kezdetén megjelenítjük a játékszabályokat
 			// mint az a következő sorból is látszik, az osztályon belül a this használata nem kötelező
 			View.GamePlayTextBlock.Visibility = System.Windows.Visibility.Visible;
+			View.NumberOfMealsTextBlock.Visibility = System.Windows.Visibility.Visible;
 		}
 
 		internal void KeyDown(KeyEventArgs e)

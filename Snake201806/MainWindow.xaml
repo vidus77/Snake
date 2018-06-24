@@ -21,5 +21,18 @@
             
         </TextBlock>
         
+        <!--Pontszámláló a mező közepén-->
+        <TextBlock x:Name="NumberOfMealsTextBlock"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="120"
+                   FontWeight="Bold"
+                   Foreground="LightGreen"
+                   Opacity="0.5"
+                   Text="0"
+                   Visibility="Hidden"
+                   />
+
+
     </Grid>
 </Window>
