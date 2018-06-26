@@ -138,10 +138,10 @@ Az alkalmazásunk felépítése a következő
 ```
 ### 1. Feladat
 - [x] elkészíteni a képernyőt (View: MainWindows.xaml)
-  - [ ] tudnia kell megjeleníteni a kígyó fejét
-    - [ ] ehhez kell a játéktábla
-      - [ ] meg kell tudni jeleníteni a megevett ételek számát
-      - [ ] Opcionálisan
+  - [x] tudnia kell megjeleníteni a kígyó fejét
+    - [x] ehhez kell a játéktábla
+      - [x] meg kell tudni jeleníteni a megevett ételek számát
+      - [x] Opcionálisan
         - [ ] meg kell tudni jeleníteni az eltelt időt (Házi feladat)
         - [ ] meg kell tudni jeleníteni a kígyó hosszát (Házi feladat)
   - [x] tudnia kell megjeleníteni a játékszabályokat

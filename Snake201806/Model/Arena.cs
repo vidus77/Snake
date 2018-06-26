@@ -20,6 +20,7 @@ namespace Snake201806.Model
 	{
 
 		private MainWindow View;
+		private Snake snake;
 
 		/// <summary>
 		/// (Autamtikusan generált) Konstruktorfüggvény, ő hozza létre az osztály egy-egy példányát.
@@ -38,8 +39,25 @@ namespace Snake201806.Model
 
 			// A játék kezdetén megjelenítjük a játékszabályokat
 			// mint az a következő sorból is látszik, az osztályon belül a this használata nem kötelező
-			View.GamePlayTextBlock.Visibility = System.Windows.Visibility.Visible;
-			View.NumberOfMealsTextBlock.Visibility = System.Windows.Visibility.Visible;
+			View.GamePlayBorder.Visibility = System.Windows.Visibility.Visible;
+			View.NumberOfMealsTextBlock.Visibility = System.Windows.Visibility.Hidden;
+			View.ArenaGrid.Visibility = System.Windows.Visibility.Visible;
+
+			snake = new Snake(10,10);
+
+			//Kigyofej mejelenitese "Circle" Ikonnal
+			//
+			//A grid a tartalmazott elemeit egy gyüjteményen keresztül teszi elérhetővé
+			//	ez a gyűjtemény egy felsorolás, ahol az első elem a 0. indexű, a 2. elem az 1-es stb.
+			//	tehát a tizedik sor tizedik elemét így tudjuk elérni [10 * 20 + 10]
+			var cell = View.ArenaGrid.Children[10 * 20 + 10];
+
+			//viszont a gridnek tükmindegy mi van ott, egy általános IUElement típust ad vissza
+			//	ez lehet bármi, ami éppen belekerült
+			var image = (FontAwesome.WPF.ImageAwesome)cell;
+			//és ha már így megtaláltuk a gridben, akkor meg is tudjuk változtatni a tlajdonságát
+			// adott esetben módosítjuk az Icont 
+			image.Icon = FontAwesome.WPF.FontAwesomeIcon.Circle;
 		}
 
 		internal void KeyDown(KeyEventArgs e)
@@ -56,8 +74,11 @@ namespace Snake201806.Model
 				//	break;
 				case Key.Down:
 					// A játék indulásával eltűntetjük a szabályokat
-					View.GamePlayTextBlock.Visibility = System.Windows.Visibility.Hidden;
+					View.GamePlayBorder.Visibility = System.Windows.Visibility.Hidden;
+					View.NumberOfMealsTextBlock.Visibility = System.Windows.Visibility.Visible;
+					View.ArenaGrid.Visibility = System.Windows.Visibility.Visible;
 
+					
 					//az Output ablak kontrolja
 					Console.WriteLine(e.Key); // cw +Tab + Tab ~Console.WriteLine~ kiírjuk debugban mit ütöttünk le. 
 

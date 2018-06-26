@@ -72,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Arena.cs" />
+    <Compile Include="Model\ArenaPosition.cs" />
+    <Compile Include="Model\Snake.cs" />
+    <Compile Include="Model\SnakeHeadDirectionEnum.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,6 +104,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="imageAweso\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
