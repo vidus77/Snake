@@ -212,10 +212,20 @@ Játékmenet programozása
 - Átnevezzük a **"mainWinow"** változót **"view"** névre (a kisbetűst)
 - Átnevezzük a **"MainWindow"** _osztályon_belüli_változót_ **"View"** névre (ő a nagybetűs vűltozónk)
 
-7. 
+7. ideiglenes megoldasként 20x20-as kézimunkás `Grid` lesz a játéktér, aminek elemeit (kockájainak tartalmát) szimpla felsorolásként érhetjük el. 
+- Gridbe Ikonokat teszünk, amiket majd váltogathatunk a tartalomnak megfelelően.
+- ideiglenesen a színét is változtattam
+- agrid koordinátának kezelésére létrehozunk egy áj osztályt. egyelőre ez egy egyszerű feladatot lát el, két x,y koordinátákat tud kezelni egy getterrel és egy setterrel. 
+8. A kígyó is kap egy saját osztályt 
+- Tudnia kell a saját pozicóját 
+- Tudja a fejének az irányát (igazából csak tudja hol kérdezze)
+9. a kígyó fejének irányát kezelendő is létrehoztunk egy osztályt, ami nem csak a négy irnyát tudja megjegyezni, hanem a kezdeti nyugalmi állapotot is.
+10. 
 
 ### 1. Házi feladat 
 - meg kell tudni jeleníteni az eltelt időt
 - meg kell tudni jeleníteni a kígyó hosszát
 - elgondolkodni az ütközések programozásáról
 - csatlakozás a DotNet cápákhoz a [facebookon](https://www.facebook.com/groups/dotnetcapak/)
+
+
